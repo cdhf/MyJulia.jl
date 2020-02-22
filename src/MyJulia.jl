@@ -46,8 +46,20 @@ function mygermancsv(filename, skipto = 0, footerskip = 0)
     CSV.read(filename, decimal = ',', skipto = skipto, footerskip = footerskip)
 end
 
-function myvlscatter(df, x, y)
-    electrondisplay(df |> @vlplot(:point, x=x, y=y))
+function myvlscatter(df, x, y, title = "")
+    electrondisplay(df |> @vlplot(:point, x=x, y=y, title=title))
+end
+
+function myvlscatter(arr :: AbstractArray{T, 2}, title="") where T
+    if size(arr, 1) == 2
+        df = DataFrame(x = arr[1, :], y = arr[2, :])
+        myvlscatter(df, :x, :y, title)
+    elseif size(arr, 2) == 2
+        df = DataFrame(x = arr[:, 1], y = arr[:, 2])
+        myvlscatter(df, :x, :y, title)
+    else
+        error("invalid shape")
+    end
 end
 
 end # module
