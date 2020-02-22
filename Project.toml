@@ -3,6 +3,22 @@ uuid = "e492b99e-1c3d-4569-8c46-fb6005ad55c0"
 authors = ["Danny Chan"]
 version = "0.1.0"
 
+[deps]
+Blink = "ad839575-38b3-5650-b840-f874b8c74a25"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+ElectronDisplay = "d872a56f-244b-5cc9-b574-2017b5b909a8"
+Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
+PackageCompiler = "9b87118b-4619-50d2-8e1e-99f35a4d4d9d"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
+Query = "1a8c2f83-1ff3-5112-b086-8aa67b057ba1"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+TableView = "40c74d1a-b44c-5b06-a7c1-6cbea58ea978"
+VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
+
 [compat]
 julia = "1.3"
 
