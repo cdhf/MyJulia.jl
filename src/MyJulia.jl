@@ -4,7 +4,7 @@ export mycheatsheet, mycompile, myshowtable, myedit, mygermancsv, myvlscatter
 
 using Reexport
 
-@reexport using CSV, DataFrames, ElectronDisplay, PlotlyJS, VegaLite, Query
+@reexport using CSV, DataFrames, ElectronDisplay, PlotlyJS, VegaLite, Query, BenchmarkTools
 
 using PackageCompiler: create_sysimage
 using Pkg: instantiate
