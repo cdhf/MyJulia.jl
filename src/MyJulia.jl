@@ -13,6 +13,10 @@ function mycompile()
     instantiate()
     image_file = normpath(joinpath(@__DIR__, "..", "MyJuliaImage.dll"))
     packages = [:Revise, :CSV, :DataFrames, :ElectronDisplay, :PlotlyJS, :VegaLite, :TableView, :Blink, :Query]
+    if Sys.iswindows()
+        packages = [:Revise, :CSV, :DataFrames, :ElectronDisplay, :PlotlyJS, :VegaLite, :TableView, :Query]
+    end
+    @info "compiling $packages"
     precompile_script = joinpath(@__DIR__, "precompile_script.jl")
     create_sysimage(packages, sysimage_path = image_file, precompile_execution_file = precompile_script)
 end
