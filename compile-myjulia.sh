@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-julia --startup-file=no -L ~\.julia\dev\MyJulia.jl\src\mystartup.jl --project=~\.julia\dev\MyJulia.jl -e "mycompile()"
+julia --startup-file=no -L ~/.julia/dev/MyJulia.jl/src/mystartup.jl --project=~\.julia/dev/MyJulia.jl -e "mycompile()"
